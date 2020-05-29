@@ -1,0 +1,355 @@
+@import "./variables";
+
+.flex-wrapper.dark {
+
+  background: $dark_background;
+
+  input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+
+    &:-webkit-autofill{
+        border: none;
+        -webkit-text-fill-color: $dark_text;
+        -webkit-box-shadow: $dark_input_shadows;
+        transition: background-color 5000s ease-in-out 0s;
+      &:hover,
+      &:focus {
+        border: none;
+        -webkit-text-fill-color: $dark_text;
+        -webkit-box-shadow: $dark_input_shadows;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+    }
+
+    background: $dark_background;
+    box-shadow: $dark_input_shadows;
+    color: $dark_text;
+    &::placeholder {
+      color: $dark_text;
+    }
+  }
+
+  .error {
+    color: $dark_danger;
+  }
+
+  .btn {
+    box-shadow: $dark_shadows;
+    color: $dark_background;
+  }
+
+  .form_header {
+    color: $dark_text;
+  }
+
+  .message {
+    background: $dark_background;
+    box-shadow: $dark_shadows;
+    .form_text {
+      color: $dark_text;
+    }
+  }
+}
+
+.side_nav.dark {
+  background: rgb(42, 40, 58);
+  box-shadow: $dark_shadows;
+  .logo {
+    h1 {
+      color: lighten($logo, 30%);
+    }
+  }
+
+.nav_menu  {
+  ul {
+    li {
+      &:hover {
+        cursor: pointer;
+        box-shadow: $dark_shadows;
+        background: lighten($dark_background, 10%);
+      }
+    }
+    li.router-link-active,
+    li.router-link-exact-active {
+
+      color: $primary;
+      background: $dark_background;
+      box-shadow: $dark_shadows;
+
+
+    }
+  }
+}
+
+  .control-wrapper {
+
+    margin-top: 6rem;
+    .input_group {
+      .slider.round {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lighten($dark_background, 20%);
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider.round:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $dark_background;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .text {
+        color: $dark_text;
+      }
+    }
+  }
+}
+
+.page_container.dark {
+
+  .page {
+
+
+    .error {
+      color: $dark_danger;
+    }
+
+    .page_section {
+      .sheet {
+        background: $dark_background;
+        box-shadow: $dark_shadows;
+        color: #cacaca;
+      }
+    }
+
+
+
+    background: $dark_background;
+    .page_header {
+      color: rgb(202, 202, 202);
+    }
+
+    .text {
+      color: #cacaca;
+    }
+
+    .btn {
+      box-shadow: $dark_shadows;
+      color: $dark_background;
+    }
+
+    .btn_flat {
+      background: $dark_background;
+      color: $dark_text;
+      box-shadow: $dark_shadows;
+
+      &:hover{
+        cursor: pointer;
+        background: lighten($dark_background, 2%);
+      }
+    }
+
+    .quillWrapper {
+      box-shadow: $dark_shadows;
+      background: lighten($dark_background, 60%);;
+    }
+
+    .ql-toolbar.ql-snow {
+      background: lighten($dark_background, 60%);
+      border-radius: 10px;
+    }
+
+      .ql-container.ql-snow {
+      height: 48rem;
+      background: $dark_background;
+      color: white;
+    }
+    .ql-editor {
+      color: $dark_text;
+    }
+
+    label {
+      color: rgb(202, 202, 202);
+    }
+    .table {
+       background: $dark_background;
+       color: $dark_text;
+
+      .row {
+        background: $dark_background;
+        box-shadow: $dark_shadows;
+
+
+
+      }
+
+
+      .table_header {
+        box-shadow: none;
+      }
+
+
+    }
+
+    .cards_container {
+      .card {
+        background: $dark_background;
+        box-shadow: $dark_shadows;
+        .text {
+          color: rgb(202, 202, 202);
+        }
+        .card_header {
+          border-bottom: 1px solid rgb(199, 199, 199);
+        }
+
+        .text_value {
+          border-bottom: none;
+        }
+      }
+    }
+
+
+    .modal_container {
+      z-index: 2000;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top:0;
+      height: 100vh;
+      background: rgba(0,0,0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .modal_card {
+        display: flex;
+        flex-flow: column;
+        background: $dark_background;
+        padding: 2rem 1rem;
+        border-radius: 2px;
+
+        .modal_message {
+          padding: 1rem 3rem;
+          font-family: 'Roboto';
+          font-size: 0.9rem;
+          font-weight: lighter;
+          color: $dark_text;
+        }
+
+        .modal_controls {
+
+          .action-btn {
+            box-shadow: $dark_shadows;
+          }
+          .close-btn {
+            box-shadow: $dark_shadows;
+            color: $dark_background;
+          }
+        }
+
+
+      }
+
+
+    }
+
+    .vdp-datepicker * {
+      background: $dark_background;
+      color: white;
+
+    }
+
+    .vdp-datepicker__calendar header .up:not(.disabled):hover {
+      background: rgb(126, 120, 180);
+    }
+
+
+    .vdp-datepicker__calendar header .prev:not(.disabled):hover, .vdp-datepicker__calendar header .next:not(.disabled):hover, .vdp-datepicker__calendar header .up:not(.disabled):hover {
+      background: rgb(126, 120, 180);
+    }
+
+    .select{
+      background: $dark_background;
+      .select_input {
+        background: $dark_background;
+        box-shadow: $dark_shadows;
+
+        .select_value {
+          background: $dark_background;
+          color: $dark_text;
+        }
+      }
+      .select_options {
+        background: $dark_background;
+        box-shadow: $dark_shadows;
+        .s_option {
+          color: $dark_text;
+          &:hover {
+            color: $dark_background;
+          }
+        }
+      }
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+      background: $dark_background;
+      box-shadow: $dark_input_shadows;
+      color: $dark_text;
+      &::placeholder {
+        color: $dark_text;
+      }
+    }
+    label {
+      margin-right: 0.5rem;
+    }
+
+    select {
+      background: $dark_background;
+      box-shadow: $dark_shadows;
+      color: $dark_text;
+
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $dark_text;
+      }
+      &:hover {
+        background: lighten($dark_background, 3%);
+        transition: background 0.3s ease-in;
+      }
+    }
+
+    [type="file"] + label {
+      background: $dark_background;
+      color: $dark_text;
+      box-shadow: $dark_shadows;
+    }
+
+    [type="file"]:focus + label,
+    [type="file"] + label:hover {
+      background: lighten($dark_background, 3%);
+    }
+
+
+
+  }
+
+
+}
+
+
+
+
+
+
+

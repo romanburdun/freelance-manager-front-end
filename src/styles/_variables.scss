@@ -1,0 +1,16 @@
+$primary: #80C649;
+$background: #F7F8F7;
+$logo: #737373;
+$text_main: #3e3e3e;
+
+$danger: #d9331b;
+$blue: #2e849e;
+
+$shadows: -8px -8px 16px lighten($background, 10%), 8px 8px 16px darken($background, 10%);
+$input_shadows: inset -8px -8px 16px #FFFFFF, inset 8px 8px 16px #C7C7C7;
+
+$dark_background: #2A283A;
+$dark_text: #cacaca;
+$dark_shadows: -8px -8px 16px lighten($dark_background,10%), 8px 8px 16px darken($dark_background,10%);
+$dark_danger: rgb(246, 67, 93);
+$dark_input_shadows: inset -3px -3px 12px lighten($dark_background,20%), inset 3px 3px 12px darken($dark_background,20%);

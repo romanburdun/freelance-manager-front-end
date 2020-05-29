@@ -1,0 +1,325 @@
+@import '../styles/_variables.scss';
+.btn {
+    border-radius: 10px;
+    border: none;
+    min-width: 6rem;
+    padding: 0.8rem 2rem;
+    background: $primary;
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: $shadows;
+    &:hover {
+        cursor: pointer;
+        background: darken($primary, 5%);
+        transition: background 0.2s ease-in;
+    }
+}
+
+.btn_flat {
+    @extend .btn;
+    background: $background;
+    font-weight: normal;
+
+    color: $text_main;
+    &:hover {
+        cursor: pointer;
+        background: lighten($background, 2%);
+        transition: background 0.2s ease-in;
+    }
+}
+
+.btn_stack {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+}
+
+.input_group {
+    display: flex;
+    flex-flow: column;
+
+
+
+
+    @media(min-width: 1440px) {
+        flex-flow: row;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+
+
+    .input {
+        display: flex;
+        flex-flow: column;
+
+        .select {
+            margin-bottom: 2rem;
+            @media(min-width: 1440px) {
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+
+        }
+
+
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+ }
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    height: 2rem;
+
+    background: $background;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: $input_shadows;
+    color: $text_main;
+    &:focus {
+        outline: none;
+    }
+    &:disabled {
+        box-shadow: $input_shadows;
+    }
+
+    @media(min-width: 1440px) {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+label {
+    margin-right: 0.5rem;
+}
+
+select {
+    padding: 0 1rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background: $background;
+    box-shadow: $shadows;
+    border: none;
+    border-radius: 10px;
+    color: $text_main;
+    appearance: none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $text_main;
+    }
+    &:hover {
+        transition: background 0.3s ease-in;
+        background: lighten($background, 3%);
+    }
+
+    @media(min-width: 1440px) {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+}
+
+
+[type="file"] {
+
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+[type="file"] + label {
+    content: 'Choose a file';
+
+
+    min-width: 6rem;
+    background: $background;
+    border: none;
+    border-radius: 10px;
+    box-shadow: $shadows;
+    color: $text_main;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+
+}
+
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+
+        background: lighten($background, 3%);
+        transition: background 0.2s ease-in;
+
+
+}
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 1px;
+    bottom: 2px;
+    background: $background;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: $primary;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px $primary;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.select {
+    display: inline-block;
+    position: relative;
+
+
+    .select_input {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        min-height: 2rem;
+        min-width: 0;
+        border-radius: 10px;
+        box-shadow: $shadows;
+        background: $background;
+        cursor: pointer;
+        color: $text_main;
+        &:hover {
+            transition: background 0.3s ease-in;
+            background: lighten($background, 3%);
+            .select_value {
+                transition: background 0.3s ease-in;
+                background: lighten($background, 3%)
+            }
+        }
+
+        .select_value {
+
+            margin: auto 0 auto 1rem;
+            color: $text_main;
+            font-size: 0.8rem;
+            background: $background;
+
+        }
+        img {
+            width: 32px;
+            height: 32px;
+            margin-left: auto;
+            margin-right: 0.4rem;
+        }
+
+
+        .material-design-icon {
+            margin-left: auto;
+            display: block;
+            margin-right: 1.5rem;
+            height: 100%;
+
+        }
+
+        .material-design-icon__svg {
+            fill: $primary;
+            margin-left: auto;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .select_options {
+        position: absolute;
+        background: $background;
+        padding: 0.5rem;
+        border-radius: 10px;
+        box-shadow: $shadows;
+        width: 100%;
+        display: none;
+        z-index: 300;
+
+        .s_option {
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            color: $text_main;
+            &:hover {
+                background: $primary;
+                transition: all 0.3s ease-in;
+                color: white;
+            }
+        }
+    }
+
+    .show_options {
+        display: block;
+        top: -20px;
+    }
+}

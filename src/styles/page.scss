@@ -1,0 +1,82 @@
+@import '../styles/_variables.scss';
+.page_container {
+    .page {
+        background: $background;
+
+        padding: 20% 2% 5%;
+
+        @media(min-width:768px) {
+            padding: 5% 5%;
+        }
+
+        @media(min-width:1024px) {
+            padding: 5% 10%;
+        }
+
+        @media(min-width:1440px) {
+            padding: 5% 5%;
+        }
+        min-height: 100vh;
+        font-family: 'Open Sans';
+
+        .page_header {
+            font-weight: 200;
+            font-size: 1.8rem;
+            color: $text_main;
+        }
+
+        .page_section {
+            margin-to: 2rem;
+            margin-bottom: 2rem;
+            .page_header {
+                margin-bottom: 2rem;
+            }
+
+
+
+            .page_indicator {
+                margin-left: 2rem;
+
+            }
+
+            label {
+                color: $text_main;
+            }
+
+            .sheet {
+                margin-top: 0.5rem;
+                background: $background;
+                padding: 1.5rem 2rem;
+                min-height: 50vh;
+                box-shadow: $shadows;
+                border-radius: 10px;
+                ol,ul {
+                    padding-left: 4rem;
+                }
+
+
+
+            }
+
+            .page_controls {
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+
+                .right_auto {
+                    margin-right: auto;
+                }
+
+                .left_auto {
+                    margin-left: auto;
+                }
+            }
+        }
+
+
+    }
+}
+p ol ul {
+    padding: 2rem;
+
+}

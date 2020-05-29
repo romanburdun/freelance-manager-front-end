@@ -1,0 +1,30 @@
+@import "./variables";
+
+.error {
+  padding: 0.4rem 0;
+  color: $danger;
+  font-weight: bold;
+
+}
+
+.text-green {
+  color: $primary;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.text {
+  color: $text_main;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.actionable-text {
+
+  @extend .text-green;
+
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+
+
+}

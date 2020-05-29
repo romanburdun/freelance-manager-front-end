@@ -1,0 +1,111 @@
+
+
+.flex-wrapper {
+  display: flex;
+  font-family: 'Roboto';
+  align-items: center;
+  justify-content: center;
+  background: $background;
+}
+
+
+.form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+
+  @media(min-width: 768px) {
+    width: 60vw;
+
+  }
+
+  @media(min-width: 1024px) {
+    width: 40vw;
+
+  }
+
+  @media(min-width: 1440px) {
+    width: 50vw;
+  }
+
+  a {
+    color: $primary;
+    font-weight: lighter;
+    &:visited {
+      color: $primary;
+    }
+  }
+}
+
+.input {
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  input[type="email"],
+  input[type="text"],
+  input[type="password"] {
+    padding-left: 1rem;
+    height: 2rem;
+    width: 100%;
+  }
+}
+
+
+.btn {
+
+  width: 100%;
+}
+
+.form_stack {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+
+
+  .success_message {
+    font-weight: normal;
+    color: $primary;
+  }
+  @media(min-width: 768px) {
+    width: 100%;
+  }
+
+  @media(min-width: 1440px) {
+    width: 40%;
+  }
+
+}
+
+.form_header {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  color: $text_main;
+
+}
+
+.form_text {
+
+  font-weight: normal;
+  margin-bottom: 1rem;
+
+}
+
+.message {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem;
+  box-shadow: $shadows;
+  border-radius: 10px;
+  .form_header {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,140 @@
+@import './variables';
+
+.cards_container {
+    display: grid;
+    min-height: 0;
+    min-width: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+
+    @media(min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+
+    @media(min-width: 1920px) {
+        grid-template-columns: repeat(auto-fit,minmax(30px, 1fr));
+        grid-gap: 8rem;
+    }
+
+
+
+
+    .card {
+        height: 100%;
+        border-radius: 4px;
+        min-width: 10rem;
+        padding: 1rem 2rem;
+        background: $background;
+        box-shadow: $shadows;
+        border-radius: 10px;
+
+
+        .card_field_value {
+            margin-left: 1rem;
+            color: $primary;
+        }
+
+
+        .card_header {
+            display: flex;
+            flex-flow: row;
+            
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.4);
+ 
+        }
+        .card_content {
+            display: flex;
+            flex-flow: column;
+            padding: 1rem 0;
+
+
+
+            .card_row {
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+            }
+            
+            .progress {
+                display: block;
+                width:200px;
+                height: 200px;
+                margin: auto;
+            
+            }
+            .btn {
+                margin-top: 1rem;
+                margin-left: auto;
+            }
+
+            .completed {
+                color: darken($primary, 10%);
+                text-decoration: line-through;
+            }
+
+
+
+
+            .timer_options {
+                display: flex;
+                flex-flow: column;
+
+                .select {
+                    margin: 0.5rem;
+                }
+            }
+        }
+
+        .card_content .timer {
+                .text_value {
+
+                    .card_field_value {
+                        font-weight:bold;
+                        font-size: 1.1rem;
+                        margin-left: 1rem;
+                    }
+                }
+
+            .btn { margin: 0; }
+
+        }
+
+        .text_value {
+            @extend .card_header;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: none;
+
+            .card_field_value {
+                font-weight:bold;
+                font-size: 1.1rem;
+
+                margin-left: auto;
+            }
+        }
+
+
+
+    }
+}
+
+.cards_container .timer {
+    margin: 0 1rem;
+
+    .timer_options {
+        select {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media(min-width: 1440px) {
+        margin: 0 4rem;
+    }
+
+
+}
+
+
